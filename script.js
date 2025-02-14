@@ -7,6 +7,21 @@ const digit = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
 const action = ["-", "+", "X", "/"];
 
 //экран
+const display = document.querySelector(".calc-screen p");
+
+function updateFontSize() {
+  if (display.textContent.length > 7) {
+    display.style.fontSize = "3rem";
+  }
+  if (display.textContent.length > 10) {
+    display.style.fontSize = "2rem";
+  }
+  if (display.textContent.length > 14) {
+    display.style.fontSize = "1.5rem";
+  }
+}
+
+document.addEventListener("click", updateFontSize); // Проверять при каждом клике
 
 const out = document.querySelector(".calc-screen p");
 
